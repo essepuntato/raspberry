@@ -9,7 +9,7 @@
    * pass: raspberry
 
 
-# Configure keyboard
+## Configure keyboard
 To configure the keyboard layout launch:
 ```
 sudo raspi-config
@@ -18,7 +18,7 @@ sudo raspi-config
 Then select *Localization Option*, *Keyboard*, and look for the desired layout.
 
 
-# Change the default user
+## Change the default user
 Add a new user:
 ```
 sudo adduser <your user>
@@ -56,7 +56,7 @@ sudo raspi-config
 Select *Localization Option*, *WLAN Country*, and select your country. Then, go back to the home menu of the configurator, and select *System Options*, *Wireless LAN*, and put the name of your network (SSID) and the password.
 
 
-# Change hostname
+## Change hostname
 To change the name of the machine (hostname), run the configurator:
 ```
 sudo raspi-config
@@ -65,7 +65,7 @@ sudo raspi-config
 Then select *System Options*, *Hostname*, and change it. Reboot at the end.
 
 
-# Enable ssh to log to the raspberry from another device
+## Enable ssh to log to the raspberry from another device
 Enable ssh on the machine:
 ```
 sudo systemctl enable ssh
@@ -78,7 +78,7 @@ ssh <your user>@<new hostname>
 ```
 
 
-# Install basic packages
+## Install basic packages
 First, update the index:
 ```
 sudo apt-get update
@@ -92,7 +92,7 @@ sudo apt-get install libatlas-base-dev
 ```
 
 
-# Set Python 3 as base interpreter
+## Set Python 3 as base interpreter
 It is necessary to create alternative interpreters to handle it correctly. The command to install new alternatives is:
 ```
 sudo update-alternatives --install /usr/bin/python python /usr/bin/<Python interpreter> <priority>
@@ -109,7 +109,7 @@ For pip, do exactly the same:
 sudo update-alternatives --install /usr/bin/pip pip /usr/bin/pip3 1
 ```
 
-# Install Python libraries
+## Install Python libraries
 ```
 pip install jupyterlab
 pip install pandas
