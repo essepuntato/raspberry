@@ -84,12 +84,33 @@ First, update the index:
 sudo apt-get update
 ```
 
-Then, install dependences for compiling:
-```
-sudo apt-get install -y build-essential tk-dev libncurses5-dev libncursesw5-dev libreadline6-dev libdb5.3-dev libgdbm-dev libsqlite3-dev libssl-dev libbz2-dev libexpat1-dev liblzma-dev zlib1g-dev libffi-dev
-```
-
 Then install the following:
 ```
 sudo apt install git
+sudo apt install python3-pip
+sudo apt-get install libatlas-base-dev
+```
+
+
+# Set Python 3 as base interpreter
+It is necessary to create alternative interpreters to handle it correctly. The command to install new alternatives is:
+```
+sudo update-alternatives --install /usr/bin/python python /usr/bin/<Python interpreter> <priority>
+```
+
+To install such alternatives:
+```
+sudo update-alternatives --install /usr/bin/python python /usr/bin/python2.7 1
+sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.7 2
+```
+
+For pip, do exactly the same:
+```
+sudo update-alternatives --install /usr/bin/pip pip /usr/bin/pip3 1
+```
+
+# Install Python libraries
+```
+pip install jupyterlab
+pip install pandas
 ```
