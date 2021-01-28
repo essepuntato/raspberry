@@ -113,4 +113,8 @@ sudo update-alternatives --install /usr/bin/pip pip /usr/bin/pip3 1
 ```
 pip install jupyterlab
 pip install pandas
+pip install numpy
+pip install requests
+pip install python-Levenshtein
+pip install networkx
 ```
