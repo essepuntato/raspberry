@@ -1,4 +1,6 @@
-# raspberry
+# Raspberry Pi 4 setup instructions
+
+This document contains the basic instruction to startup a Raspberry Pi 4 with basic tools.
 
 ## Install raspbian lite
 1. Download the image of the OS at https://www.raspberrypi.org/software/operating-systems/
@@ -89,32 +91,4 @@ Then install the following:
 sudo apt install git
 sudo apt install python3-pip
 sudo apt-get install libatlas-base-dev
-```
-
-
-## Set Python 3 as base interpreter
-It is necessary to create alternative interpreters to handle it correctly. The command to install new alternatives is:
-```
-sudo update-alternatives --install /usr/bin/python python /usr/bin/<Python interpreter> <priority>
-```
-
-To install such alternatives:
-```
-sudo update-alternatives --install /usr/bin/python python /usr/bin/python2.7 1
-sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.7 2
-```
-
-For pip, do exactly the same:
-```
-sudo update-alternatives --install /usr/bin/pip pip /usr/bin/pip3 1
-```
-
-## Install Python libraries
-```
-pip install jupyterlab
-pip install pandas
-pip install numpy
-pip install requests
-pip install python-Levenshtein
-pip install networkx
 ```
