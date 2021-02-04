@@ -91,4 +91,5 @@ Then install the following:
 sudo apt install git
 sudo apt install python3-pip
 sudo apt-get install libatlas-base-dev
+sudo apt-get install zip
 ```
