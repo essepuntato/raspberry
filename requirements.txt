@@ -1,4 +1,5 @@
 jupyterlab
+jupyter_contrib_nbextensions
 pandas
 numpy
 requests
